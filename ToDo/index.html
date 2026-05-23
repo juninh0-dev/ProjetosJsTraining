@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do de Tarefas</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My To-Do</h1>
+        <p>Organize suas tarefas e seja mais produtivo!</p>
+        <form action="">
+            <input id="toTask" type="text">
+            <button onclick="addDo()">Adicionar</button>
+            <div id="resp">
+            </div>
+        </form>
+
+    </div>
+    <script>
+        // função para criar uma nova tarefa
+        function addDo() {
+            var task = document.getElementById("toTask").value;
+            var taskCreatead = document.getElementById("resp");
+            taskCreatead.innerHTML += `
+                <div class="tarefas" id="task">
+                    <input id='checkOut' onclick="check(this)" type="checkbox">
+                    </input>
+                    <p> ${task} </p>
+                    <button onclick='limpar(this)'> 
+                        Limpar 
+                    </button>
+                </div>`
+        }
+        // função para remover a tarefa
+        function limpar(button) {
+            button.parentElement.remove();
+        }
+        // função para dar check na tarefa
+        function check(input) {
+            var divTask = input.parentElement;
+            var texto = divTask.querySelector("p");
+
+            if (input.checked) {
+                texto.style.textDecoration = "line-through";
+                texto.style.color = "gray";
+            } else{
+                texto.style.textDecoration = "none";
+                texto.style.color = "black";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
