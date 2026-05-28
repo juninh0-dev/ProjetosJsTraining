@@ -1,23 +1,98 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+body {
+    background: rgb(221, 240, 255);
     display: flex;
+    margin-top: 10rem;
+    height: 100vh;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: rgb(0, 84, 228);
+}
+.container {
+    display: flex;
+    width: 100%;
     align-items: center;
     flex-direction: column;
 }
 
-button{
-    cursor: pointer;
-}
-
-.tarefas{
+.content {
     display: flex;
-    margin-top: 10%;
-    justify-content: space-around;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    padding: 2rem;
     border-width: 1px;
     border-style: solid;
+    border-radius: 0.5em;
+    border-color: #ccc;
+    width: 40vh;
+    height: 50vh;
+}
+
+p{
+    font-size: 1.25rem;
+    color: #333;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+input {
+    padding: 0.5rem;
     border-radius: 0.25em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    width: 100%;
+    font-size: 1rem;
+}
+.inputAdd {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btnsLayout{
+    display: flex;
+    gap: 0.5rem;
+    width: 1rem;
+    height: 3rem;
+}
+
+button {
+    cursor: pointer;
+    background: rgb(0, 84, 228);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25em;
+}
+.tarefas {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.checkOut {
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.sectionTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 0.25em;
+    width: 100%;
 }
