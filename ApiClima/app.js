@@ -19,7 +19,6 @@ async function getWeather() {
 
     // Transformando a API em json
     const result = await resp.json();
-    console.log(result.weather);
 
     const weatherInfos = document.getElementById('weatherResult');
 
@@ -31,6 +30,7 @@ async function getWeather() {
   
     // Tratando erros
   } catch (error) {
+    window.alert(`Não foi possível encontrar sua cidade! ${error.message}`);
     console.error(error.message);
   }
 }
